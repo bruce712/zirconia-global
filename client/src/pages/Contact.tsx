@@ -124,17 +124,13 @@ export default function Contact() {
     };
 
     try {
-      // TODO: Replace with actual Formspree endpoint
-      // const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(submissionData),
-      // });
+      const response = await fetch("https://formspree.io/f/xojnbblz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submissionData),
+      });
 
-      // if (!response.ok) throw new Error("Submission failed");
-
-      // Simulate submission for now
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      if (!response.ok) throw new Error("Submission failed");
 
       localStorage.setItem("lastSubmitTime", now.toString());
       setSubmitted(true);

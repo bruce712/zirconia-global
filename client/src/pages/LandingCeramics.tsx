@@ -42,7 +42,20 @@ export default function LandingCeramics() {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [form, setForm] = useState({ company: "", name: "", email: "", phone: "", country: "", message: "" });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); setSubmitted(true); toast.success("Inquiry submitted! We will respond within 12 hours."); };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await fetch("https://formspree.io/f/xojnbblz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      setSubmitted(true);
+      toast.success("Inquiry submitted! We will respond within 12 hours.");
+    } catch (error) {
+      toast.error("Failed to submit. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
