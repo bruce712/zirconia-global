@@ -18,3 +18,5 @@
 [2026-03-12T09:20:38.232Z] {"timestamp":1773307238071,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
 [2026-03-12T09:20:40.326Z] {"timestamp":1773307238318,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-03-12T09:20:40.326Z] {"timestamp":1773307238328,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-12T09:22:51.375Z] {"timestamp":1773307368890,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-12T09:22:51.375Z] {"timestamp":1773307368902,"level":"DEBUG","args":["[vite] connected."],"stack":null}
