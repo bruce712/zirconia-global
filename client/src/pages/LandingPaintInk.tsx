@@ -5,7 +5,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, ChevronRight, Send, Paintbrush } from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, ChevronRight, Send, Paintbrush } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";

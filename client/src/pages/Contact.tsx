@@ -6,7 +6,7 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronRight, Mail, Phone, MapPin, MessageCircle, Clock, Send, CheckCircle } from "lucide-react";
+import { ChevronRight, Mail, Phone, MapPin, MessageCircle, Clock, Send, CircleCheck as CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
