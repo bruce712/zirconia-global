@@ -171,8 +171,8 @@ export default function LandingPaintInk() {
       {/* Pain Points vs Solutions */}
       <section className="py-20 bg-gradient-to-b from-graphite-100 to-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-            {/* Pain Points */}
+          {/* Section Headers */}
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -180,28 +180,53 @@ export default function LandingPaintInk() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="mb-8 min-h-[160px]">
-                <span className="inline-block px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-full mb-4">
-                  Industry Challenges
-                </span>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
-                  Common Problems in Pigment Milling
-                </h2>
-                <p className="text-graphite-500 text-lg">
-                  Traditional grinding media often fail to deliver the performance needed for modern coatings.
-                </p>
-              </div>
-              <div className="space-y-4">
-                {painPoints.map((point, i) => (
-                  <motion.div
-                    key={i}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                    custom={i + 1}
-                    className="flex items-start gap-4 p-5 bg-white rounded-lg border border-red-200 shadow-sm"
-                  >
+              <span className="inline-block px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-full mb-4">
+                Industry Challenges
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+                Common Problems in Pigment Milling
+              </h2>
+              <p className="text-graphite-500 text-lg">
+                Traditional grinding media often fail to deliver the performance needed for modern coatings.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUp}
+              custom={0}
+            >
+              <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
+                Kerec Solutions
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+                Advanced Zirconia Technology
+              </h2>
+              <p className="text-graphite-500 text-lg">
+                Our 95% YSZ zirconia beads deliver superior performance across all metrics.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Paired Rows - Each pain point paired with its solution */}
+          <div className="space-y-6">
+            {painPoints.map((point, i) => {
+              const solution = solutions[i];
+              const SolutionIcon = solution.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  custom={i}
+                  className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch"
+                >
+                  {/* Pain Point Card */}
+                  <div className="flex items-start gap-4 p-5 bg-white rounded-lg border border-red-200 shadow-sm h-full">
                     <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center">
                       <point.icon className="w-5 h-5 text-red-600" />
                     </div>
@@ -209,52 +234,21 @@ export default function LandingPaintInk() {
                       <h3 className="font-semibold text-navy mb-1">{point.title}</h3>
                       <p className="text-sm text-graphite-500">{point.desc}</p>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                  </div>
 
-            {/* Solutions */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUp}
-              custom={0}
-            >
-              <div className="mb-8 min-h-[160px]">
-                <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
-                  Kerec Solutions
-                </span>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
-                  Advanced Zirconia Technology
-                </h2>
-                <p className="text-graphite-500 text-lg">
-                  Our 95% YSZ zirconia beads deliver superior performance across all metrics.
-                </p>
-              </div>
-              <div className="space-y-4">
-                {solutions.map((solution, i) => (
-                  <motion.div
-                    key={i}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                    custom={i + 1}
-                    className="flex items-start gap-4 p-5 bg-white rounded-lg border border-green-200 shadow-sm"
-                  >
+                  {/* Solution Card */}
+                  <div className="flex items-start gap-4 p-5 bg-white rounded-lg border border-green-200 shadow-sm h-full">
                     <div className="flex-shrink-0 w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
-                      <solution.icon className="w-5 h-5 text-green-600" />
+                      <SolutionIcon className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-navy mb-1">{solution.title}</h3>
                       <p className="text-sm text-graphite-500">{solution.desc}</p>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
