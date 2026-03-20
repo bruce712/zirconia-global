@@ -112,9 +112,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              High-Performance{" "}
-              <span className="text-industrial-orange">95% YSZ</span>{" "}
-              Zirconia Grinding Media
+              Premium <span className="text-industrial-orange">95% YSZ</span> Zirconia Beads & Ceramic Parts
             </motion.h1>
 
             <motion.p
@@ -123,8 +121,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/70 leading-relaxed mb-8 max-w-xl"
             >
-              Engineered for precision grinding in coatings, inks, food, chemical, and pharmaceutical industries. 
-              Ultra-high density, minimal wear, and customized solutions for your specific needs.
+              High-performance grinding media for coatings, ink, food & health, ceramics, and related industrial grinding uses. Engineered for maximum efficiency and minimal contamination.
             </motion.p>
 
             <motion.div
@@ -137,21 +134,14 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-industrial-orange text-white font-semibold text-sm rounded hover:bg-industrial-orange-hover transition-colors"
               >
-                Get a Quote
+                Request a Quote
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 text-white font-semibold text-sm rounded hover:bg-white/10 transition-colors"
               >
-                Request Free Sample
-              </Link>
-              <Link
-                href="/products/zirconia-beads"
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-white/70 font-medium text-sm hover:text-white transition-colors"
-              >
-                View Products
-                <ChevronRight className="w-4 h-4" />
+                Get Free Sample
               </Link>
             </motion.div>
           </div>
@@ -188,7 +178,7 @@ export default function Home() {
                 custom={0}
                 variants={fadeUp}
               >
-                <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Why ZircoMax</span>
+                <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Why Kerec</span>
                 <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3 mb-5 leading-tight">
                   Engineered for Superior Grinding Performance
                 </h2>

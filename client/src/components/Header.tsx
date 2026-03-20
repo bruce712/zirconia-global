@@ -88,11 +88,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-9 h-9 bg-navy rounded flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-lg leading-none">Z</span>
+              <span className="text-white font-heading font-bold text-lg leading-none">K</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-navy text-lg leading-tight tracking-tight">ZircoMax</span>
-              <span className="text-[10px] text-graphite-400 tracking-widest uppercase leading-none">Precision Ceramics</span>
+              <span className="font-heading font-bold text-navy text-lg leading-tight tracking-tight">Kerec Zirconia Beads</span>
+              <span className="text-[10px] text-graphite-400 tracking-widest uppercase leading-none">Premium Grinding Media</span>
             </div>
           </Link>
 
@@ -151,7 +151,7 @@ export default function Header() {
               href="/contact"
               className="hidden sm:inline-flex items-center px-5 py-2.5 bg-industrial-orange text-white text-sm font-semibold rounded hover:bg-industrial-orange-hover transition-colors"
             >
-              Get a Quote
+              Request a Quote
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -201,7 +201,7 @@ export default function Header() {
                   href="/contact"
                   className="block mx-3 mt-3 text-center px-5 py-2.5 bg-industrial-orange text-white text-sm font-semibold rounded hover:bg-industrial-orange-hover transition-colors"
                 >
-                  Get a Quote
+                  Request a Quote
                 </Link>
               </div>
             </motion.div>
