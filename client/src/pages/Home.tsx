@@ -20,6 +20,10 @@ import {
   Factory,
   Star,
   ChevronRight,
+  Package,
+  FileCheck,
+  Award,
+  Users,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -57,6 +61,70 @@ const industries = [
   { icon: Battery, title: "Battery Materials", desc: "Cathode & anode material processing", href: "/applications/battery" },
   { icon: Cpu, title: "Electronics", desc: "Semiconductor slurry preparation", href: "/applications/electronics" },
   { icon: Factory, title: "Ceramics Mfg", desc: "Raw material grinding & mixing", href: "/applications/ceramics" },
+];
+
+const industryCards = [
+  {
+    icon: Paintbrush,
+    title: "Paint, Ink & Coatings",
+    pain: "Achieving ultra-fine pigment dispersion without color contamination is challenging.",
+    solution: "Our 95% YSZ beads deliver nano-level grinding with minimal metal contamination, ensuring vivid color and stable quality.",
+    href: "/applications/coatings-inks",
+  },
+  {
+    icon: Beaker,
+    title: "Food & Health Powders",
+    pain: "Food-grade grinding requires absolute purity and zero toxic material release.",
+    solution: "RoHS-compliant zirconia beads provide safe, contamination-free milling for nutritional supplements and food ingredients.",
+    href: "/applications/food-health",
+  },
+  {
+    icon: Pill,
+    title: "Chemical & Pharma",
+    pain: "Pharmaceutical APIs demand extreme purity and consistent particle size distribution.",
+    solution: "SGS-tested beads ensure batch-to-batch consistency with wear rates <0.01%, meeting strict pharma standards.",
+    href: "/applications/chemical-pharma",
+  },
+  {
+    icon: Cpu,
+    title: "Ceramics & Electronic Ceramics",
+    pain: "Advanced ceramics production requires ultra-precise particle control and high grinding efficiency.",
+    solution: "High-density zirconia beads optimize grinding cycles, reducing energy costs while achieving superior fineness.",
+    href: "/applications/ceramics",
+  },
+];
+
+const buyerAdvantages = [
+  {
+    icon: Gauge,
+    title: "Stable Density & Roundness",
+    desc: "Consistent >6.0 g/cm³ density and >95% sphericity ensure predictable grinding performance.",
+  },
+  {
+    icon: Shield,
+    title: "Lower Contamination Risk",
+    desc: "95% YSZ purity minimizes metal contamination, critical for food, pharma, and high-value products.",
+  },
+  {
+    icon: Award,
+    title: "Better Wear Resistance",
+    desc: "Advanced sintering technology delivers wear rate <0.01%, extending service life 30-50% longer.",
+  },
+  {
+    icon: Target,
+    title: "Multiple Sizes Available",
+    desc: "Comprehensive range from 0.1mm to 100mm meets diverse grinding requirements across industries.",
+  },
+  {
+    icon: Package,
+    title: "Export Packaging Support",
+    desc: "Professional 25kg drums with moisture-proof sealing, suitable for global shipping and long-term storage.",
+  },
+  {
+    icon: Users,
+    title: "Sample & Technical Guidance",
+    desc: "Free sample testing and expert consultation to optimize your mill parameters and process efficiency.",
+  },
 ];
 
 const testimonials = [
@@ -205,6 +273,120 @@ export default function Home() {
 
       {/* Quick Supplier Facts */}
       <QuickSupplierFacts />
+
+      {/* Choose by Industry */}
+      <section className="py-20 lg:py-28 bg-titanium-white">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Industry Solutions</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3 mb-4">
+              Choose by Industry
+            </h2>
+            <p className="text-graphite-400 max-w-2xl mx-auto">
+              Find the perfect zirconia grinding solution tailored to your industry's specific requirements and challenges.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {industryCards.map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 1}
+                variants={fadeUp}
+                className="bg-white rounded border border-graphite-100 p-6 lg:p-8 hover:shadow-lg hover:border-industrial-orange/30 transition-all group"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-navy/5 rounded flex items-center justify-center shrink-0 group-hover:bg-industrial-orange/10 transition-colors">
+                    <card.icon className="w-6 h-6 text-industrial-orange" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-navy mb-2">
+                      {card.title}
+                    </h3>
+                  </div>
+                </div>
+                <div className="space-y-3 mb-5">
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-graphite-300 rounded-full mt-2 shrink-0" />
+                    <p className="text-sm text-graphite-500 leading-relaxed">
+                      <span className="font-medium text-graphite-600">Challenge:</span> {card.pain}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 bg-industrial-orange rounded-full mt-2 shrink-0" />
+                    <p className="text-sm text-graphite-600 leading-relaxed">
+                      <span className="font-medium text-navy">Solution:</span> {card.solution}
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href={card.href}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-industrial-orange hover:text-industrial-orange-hover transition-colors group-hover:gap-3"
+                >
+                  View Industry Solution
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Buyers Choose Kerec */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Competitive Advantages</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3 mb-4">
+              Why Buyers Choose Kerec
+            </h2>
+            <p className="text-graphite-400 max-w-2xl mx-auto">
+              Six key reasons why global B2B buyers trust Kerec as their preferred zirconia grinding media supplier.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {buyerAdvantages.map((advantage, i) => (
+              <motion.div
+                key={advantage.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 1}
+                variants={fadeUp}
+                className="bg-titanium-white rounded border border-graphite-100 p-6 hover:border-industrial-orange/30 hover:shadow-md transition-all group"
+              >
+                <div className="w-12 h-12 bg-white border border-graphite-100 rounded flex items-center justify-center mb-4 group-hover:border-industrial-orange/30 group-hover:bg-industrial-orange/5 transition-all">
+                  <advantage.icon className="w-6 h-6 text-industrial-orange" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-navy mb-2">
+                  {advantage.title}
+                </h3>
+                <p className="text-sm text-graphite-500 leading-relaxed">
+                  {advantage.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Product Features */}
       <section className="py-20 lg:py-28 bg-titanium-white">
