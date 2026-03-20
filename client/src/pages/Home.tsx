@@ -24,6 +24,10 @@ import {
   FileCheck,
   Award,
   Users,
+  Download,
+  ClipboardCheck,
+  FileText,
+  FlaskConical,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -665,6 +669,189 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Certificates & Reports */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Certifications</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
+              Certificates & Test Reports
+            </h2>
+            <p className="text-graphite-400 mt-4 max-w-2xl mx-auto">
+              Full compliance documentation available for download. All products backed by internationally recognized certifications.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { title: "ISO 9001:2015", subtitle: "Quality Management", icon: Award },
+              { title: "SGS Test Report", subtitle: "Third-party Verification", icon: FileCheck },
+              { title: "RoHS Compliance", subtitle: "Environmental Safety", icon: Shield },
+              { title: "COA Sample", subtitle: "Certificate of Analysis", icon: ClipboardCheck },
+              { title: "TDS Document", subtitle: "Technical Data Sheet", icon: FileText },
+            ].map((cert, i) => (
+              <motion.div
+                key={cert.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 1}
+                variants={fadeUp}
+                className="group cursor-pointer"
+              >
+                <div className="bg-titanium-white border border-graphite-100 rounded overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-[3/4] bg-gradient-to-br from-navy/5 to-industrial-orange/5 flex items-center justify-center relative overflow-hidden">
+                    <cert.icon className="w-16 h-16 text-industrial-orange/20 absolute" />
+                    <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors flex items-center justify-center">
+                      <div className="bg-white/90 px-4 py-2 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        <Download className="w-5 h-5 text-industrial-orange" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 text-center">
+                    <div className="font-heading font-bold text-navy text-sm mb-1">
+                      {cert.title}
+                    </div>
+                    <div className="text-xs text-graphite-400">
+                      {cert.subtitle}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={6}
+            variants={fadeUp}
+            className="text-center mt-10"
+          >
+            <Link
+              href="/quality"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold text-sm rounded hover:bg-navy/90 transition-colors"
+            >
+              View All Certifications
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Typical Export Applications */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-navy via-navy to-navy-light relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-industrial-orange rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-industrial-orange rounded-full blur-3xl" />
+        </div>
+
+        <div className="container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Applications</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-white mt-3">
+              Typical Export Applications
+            </h2>
+            <p className="text-white/70 mt-4 max-w-2xl mx-auto">
+              Proven performance in demanding industrial processes worldwide
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {[
+              {
+                title: "Pigment Dispersion and Nano Grinding",
+                description: "Ultra-fine particle size reduction for coatings, inks, and pigments. High density ensures efficient energy transfer with minimal media wear contamination.",
+                icon: Beaker,
+                features: ["0.1-0.3 mm for nano grinding", "Low iron content < 0.01%", "Ideal for high-speed dispersers"],
+              },
+              {
+                title: "Food Powder Milling with Low Contamination Risk",
+                description: "Food-grade zirconia beads approved for direct contact applications. Non-toxic, chemically inert, and compliant with food safety regulations.",
+                icon: Factory,
+                features: ["RoHS & FDA material compliant", "0.4-1.0 mm most common", "Chocolate, sugar, spice grinding"],
+              },
+              {
+                title: "Pharma / Chemical Fine Grinding",
+                description: "Meet pharmaceutical GMP requirements with high-purity zirconia. Excellent chemical resistance ensures product integrity and zero cross-contamination.",
+                icon: FlaskConical,
+                features: ["95% YSZ purity guaranteed", "0.3-0.6 mm for APIs", "Batch traceability & COA provided"],
+              },
+              {
+                title: "Ceramic Slurry and Glaze Preparation",
+                description: "Specialized for ceramic industry applications including glaze, engobe, and ceramic slurry dispersion. High wear resistance extends operational life.",
+                icon: Package,
+                features: ["1.0-3.0 mm for coarse grinding", "Superior sphericity > 95%", "Long service life in alkaline slurry"],
+              },
+            ].map((app, i) => (
+              <motion.div
+                key={app.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 1}
+                variants={fadeUp}
+                className="flex gap-6"
+              >
+                <div className="shrink-0">
+                  <div className="w-14 h-14 rounded-full bg-industrial-orange/10 border border-industrial-orange/20 flex items-center justify-center">
+                    <app.icon className="w-7 h-7 text-industrial-orange" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-white mb-3">
+                    {app.title}
+                  </h3>
+                  <p className="text-white/70 text-sm leading-relaxed mb-4">
+                    {app.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {app.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2 text-sm text-white/60">
+                        <ArrowRight className="w-4 h-4 text-industrial-orange shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={5}
+            variants={fadeUp}
+            className="text-center mt-12"
+          >
+            <Link
+              href="/applications"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-industrial-orange text-white font-semibold text-sm rounded hover:bg-industrial-orange-hover transition-colors"
+            >
+              Explore All Applications
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
