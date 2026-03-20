@@ -22,6 +22,7 @@ const LandingPaintInk = lazy(() => import("./pages/LandingPaintInk"));
 const LandingCeramics = lazy(() => import("./pages/LandingCeramics"));
 const LandingBattery = lazy(() => import("./pages/LandingBattery"));
 const LandingMinerals = lazy(() => import("./pages/LandingMinerals"));
+const LandingFoodHealth = lazy(() => import("./pages/LandingFoodHealth"));
 
 function PageLoader() {
   return (
@@ -42,6 +43,7 @@ function Router() {
         <Route path="/products/packaging" component={Packaging} />
         <Route path="/products" component={ZirconiaBeads} />
         <Route path="/applications/coatings-inks" component={LandingPaintInk} />
+        <Route path="/applications/food-health" component={LandingFoodHealth} />
         <Route path="/applications/ceramics-electronic-ceramics" component={LandingCeramics} />
         <Route path="/applications/battery-materials" component={LandingBattery} />
         <Route path="/applications/minerals-chemicals" component={LandingMinerals} />
