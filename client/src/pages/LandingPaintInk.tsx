@@ -180,7 +180,7 @@ export default function LandingPaintInk() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="mb-8">
+              <div className="mb-8 min-h-[160px]">
                 <span className="inline-block px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-full mb-4">
                   Industry Challenges
                 </span>
@@ -222,7 +222,7 @@ export default function LandingPaintInk() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="mb-8">
+              <div className="mb-8 min-h-[160px]">
                 <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
                   Kerec Solutions
                 </span>
