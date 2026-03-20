@@ -44,12 +44,12 @@ export default function Packaging() {
             <p className="text-graphite-400 leading-relaxed">
               We ensure your zirconia products arrive safely with professional packaging and reliable global shipping solutions.
             </p>
-          </section>
+          </motion.div>
 
       {/* Quick Supplier Facts */}
       <QuickSupplierFacts />
 
-      {/* Features */}*/}
+      {/* Features */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
             {[
               { icon: Package, title: "Secure Packaging", desc: "Multi-layer protection prevents damage during transit" },

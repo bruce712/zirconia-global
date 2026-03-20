@@ -97,23 +97,13 @@ export default function Home() {
         </div>
         <div className="container relative z-10 py-20 lg:py-32">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/20 rounded-sm text-xs text-white/80 uppercase tracking-wider mb-6"
-            >
-              <span className="w-1.5 h-1.5 bg-industrial-orange rounded-full" />
-              ISO 9001 &middot; SGS Certified &middot; RoHS Compliant
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              Premium <span className="text-industrial-orange">95% YSZ</span> Zirconia Beads & Ceramic Parts
+              Premium <span className="text-industrial-orange">95% YSZ</span> Zirconia Beads for High-Efficiency Grinding
             </motion.h1>
 
             <motion.p
@@ -122,14 +112,14 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/70 leading-relaxed mb-8 max-w-xl"
             >
-              High-performance grinding media for coatings, ink, food & health, ceramics, and related industrial grinding uses. Engineered for maximum efficiency and minimal contamination.
+              High-density, low-wear zirconia grinding media for coatings, ink, food powders, pharma, and advanced ceramic applications.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-3 mb-8"
             >
               <Link
                 href="/contact"
@@ -145,23 +135,69 @@ export default function Home() {
                 Get Free Sample
               </Link>
             </motion.div>
-          </div>
 
-          {/* Stats bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded overflow-hidden"
-          >
-            {stats.map((stat) => (
-              <div key={stat.label} className="bg-navy/80 backdrop-blur-sm px-6 py-5 text-center">
-                <div className="font-heading text-2xl md:text-3xl font-bold text-white">
-                  {stat.value}
-                  <span className="text-industrial-orange text-lg ml-1">{stat.unit}</span>
+            {/* Trust Badges */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-wrap items-center gap-3"
+            >
+              {[
+                { icon: Shield, label: "95% YSZ" },
+                { icon: Gauge, label: "High Density" },
+                { icon: Target, label: "Low Wear" },
+                { icon: Shield, label: "ISO 9001:2015" },
+                { icon: Shield, label: "SGS Tested" },
+                { icon: Shield, label: "RoHS Compliant" },
+              ].map((badge, i) => (
+                <div
+                  key={badge.label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 border border-white/20 rounded-sm text-xs text-white/90 font-medium backdrop-blur-sm"
+                >
+                  <badge.icon className="w-3.5 h-3.5 text-industrial-orange" />
+                  {badge.label}
                 </div>
-                <div className="text-xs text-white/50 uppercase tracking-wider mt-1">{stat.label}</div>
-              </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Purchase Info */}
+      <section className="py-8 bg-white border-b border-graphite-100">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            {[
+              { label: "Common Sizes", value: "0.1–100 mm", icon: Target },
+              { label: "MOQ", value: "50 kg", icon: Gauge },
+              { label: "Standard Packaging", value: "25 kg/drum", icon: Factory },
+              { label: "Sample Availability", value: "Available", icon: Shield },
+              { label: "Export Port", value: "Qingdao, China", icon: Factory },
+              { label: "Payment Terms", value: "T/T", icon: Shield },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="text-center"
+              >
+                <div className="flex items-center justify-center gap-1.5 mb-2">
+                  <item.icon className="w-4 h-4 text-industrial-orange" />
+                  <div className="text-xs text-graphite-400 font-medium uppercase tracking-wider">
+                    {item.label}
+                  </div>
+                </div>
+                <div className="font-heading text-base font-bold text-navy">
+                  {item.value}
+                </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
