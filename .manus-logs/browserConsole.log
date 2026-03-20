@@ -430,3 +430,5 @@
 [2026-03-20T11:07:49.744Z] {"timestamp":1774004867520,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-03-20T11:10:20.741Z] {"timestamp":1774005018661,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-03-20T11:10:20.741Z] {"timestamp":1774005018669,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T11:11:27.727Z] {"timestamp":1774005085238,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T11:11:27.727Z] {"timestamp":1774005085245,"level":"DEBUG","args":["[vite] connected."],"stack":null}
