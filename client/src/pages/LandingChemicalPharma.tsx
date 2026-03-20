@@ -113,13 +113,13 @@ export default function LandingChemicalPharma() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a1628] via-[#0f1e3a] to-[#0a1628]">
+    <div className="min-h-screen bg-navy">
       <Header />
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#0a1628] via-[#0f1e3a] to-[#1a2642] pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(249,115,22,0.08),transparent_50%)]" />
+      <section className="relative bg-navy pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(232,100,44,0.06),transparent_50%)]" />
 
         <div className="container relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -175,7 +175,7 @@ export default function LandingChemicalPharma() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#1a2642] p-6 rounded-xl shadow-lg border border-blue-500/30">
+              <div className="absolute -bottom-6 -left-6 bg-navy-light p-6 rounded-xl shadow-lg border border-blue-500/30">
                 <div className="text-3xl font-bold text-orange-500 mb-1">&lt;0.01%</div>
                 <div className="text-sm text-gray-300 font-medium">Ultra-Low Wear Rate</div>
               </div>
@@ -185,7 +185,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* Pain Points vs Solutions - Paired Row Layout */}
-      <section className="py-20 bg-gradient-to-b from-[#0f1e3a] to-[#1a2642]">
+      <section className="py-20 bg-navy">
         <div className="container">
           {/* Section Headers */}
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12">
@@ -242,7 +242,7 @@ export default function LandingChemicalPharma() {
                   className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch"
                 >
                   {/* Pain Point Card */}
-                  <div className="flex items-start gap-4 p-5 bg-[#1a2642] rounded-lg border border-red-500/30 shadow-sm h-full">
+                  <div className="flex items-start gap-4 p-5 bg-navy-light rounded-lg border border-red-500/30 shadow-sm h-full">
                     <div className="flex-shrink-0 w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
                       <point.icon className="w-5 h-5 text-red-400" />
                     </div>
@@ -253,7 +253,7 @@ export default function LandingChemicalPharma() {
                   </div>
 
                   {/* Solution Card */}
-                  <div className="flex items-start gap-4 p-5 bg-[#1a2642] rounded-lg border border-green-500/30 shadow-sm h-full">
+                  <div className="flex items-start gap-4 p-5 bg-navy-light rounded-lg border border-green-500/30 shadow-sm h-full">
                     <div className="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
                       <SolutionIcon className="w-5 h-5 text-green-400" />
                     </div>
@@ -270,7 +270,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* Recommended Applications */}
-      <section className="py-20 bg-[#0f1e3a]">
+      <section className="py-20 bg-navy">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -300,7 +300,7 @@ export default function LandingChemicalPharma() {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-[#1a2642] to-[#0f1e3a] rounded-xl border border-blue-500/30 hover:shadow-lg transition-shadow"
+                className="flex flex-col items-center text-center p-6 bg-navy-light rounded-xl border border-blue-500/30 hover:shadow-lg transition-shadow"
               >
                 <div className="w-14 h-14 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 shadow-sm">
                   <app.icon className="w-7 h-7 text-blue-400" />
@@ -313,7 +313,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* Size Recommendations Table */}
-      <section className="py-20 bg-gradient-to-b from-[#0a1628] to-[#0f1e3a]">
+      <section className="py-20 bg-navy">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -341,10 +341,10 @@ export default function LandingChemicalPharma() {
               viewport={{ once: true }}
               variants={fadeUp}
               custom={1}
-              className="w-full bg-[#1a2642] rounded-xl border border-blue-500/30 overflow-hidden"
+              className="w-full bg-navy-light rounded-xl border border-blue-500/30 overflow-hidden"
             >
               <thead>
-                <tr className="bg-[#0f1e3a]">
+                <tr className="bg-navy">
                   <th className="px-6 py-4 text-left text-sm font-semibold text-white border-b border-blue-500/30">
                     Bead Size Range
                   </th>
@@ -365,7 +365,7 @@ export default function LandingChemicalPharma() {
                     viewport={{ once: true }}
                     variants={fadeUp}
                     custom={i + 2}
-                    className="border-b border-blue-500/20 last:border-0 hover:bg-[#0f1e3a]/50 transition-colors"
+                    className="border-b border-blue-500/20 last:border-0 hover:bg-navy/50 transition-colors"
                   >
                     <td className="px-6 py-4">
                       <span className="font-semibold text-orange-400">{size.range}</span>
@@ -381,7 +381,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-[#0f1e3a]">
+      <section className="py-20 bg-navy">
         <div className="container max-w-4xl">
           <motion.div
             initial="hidden"
@@ -414,7 +414,7 @@ export default function LandingChemicalPharma() {
                 <AccordionItem
                   key={i}
                   value={`item-${i}`}
-                  className="bg-[#1a2642] border border-blue-500/30 rounded-lg px-6 data-[state=open]:bg-[#1a2642] data-[state=open]:border-blue-400/50"
+                  className="bg-navy-light border border-blue-500/30 rounded-lg px-6 data-[state=open]:bg-navy-light data-[state=open]:border-blue-400/50"
                 >
                   <AccordionTrigger className="text-left font-semibold text-white hover:no-underline py-5">
                     {faq.q}
@@ -430,7 +430,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-20 bg-gradient-to-br from-[#0a1628] via-[#0f1e3a] to-[#1a2642]">
+      <section id="contact-form" className="py-20 bg-navy">
         <div className="container max-w-4xl">
           <motion.div
             initial="hidden"
@@ -476,7 +476,7 @@ export default function LandingChemicalPharma() {
                 </Link>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-[#1a2642] rounded-xl shadow-lg border border-blue-500/30 p-8">
+              <form onSubmit={handleSubmit} className="bg-navy-light rounded-xl shadow-lg border border-blue-500/30 p-8">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label className="block text-sm font-semibold text-white mb-2">Company Name *</label>
@@ -486,7 +486,7 @@ export default function LandingChemicalPharma() {
                       value={form.company}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="Your company name"
                     />
                   </div>
@@ -498,7 +498,7 @@ export default function LandingChemicalPharma() {
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="Full name"
                     />
                   </div>
@@ -513,7 +513,7 @@ export default function LandingChemicalPharma() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="you@company.com"
                     />
                   </div>
@@ -525,7 +525,7 @@ export default function LandingChemicalPharma() {
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -540,7 +540,7 @@ export default function LandingChemicalPharma() {
                       value={form.country}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="United States"
                     />
                   </div>
@@ -550,7 +550,7 @@ export default function LandingChemicalPharma() {
                       name="chemicalSystem"
                       value={form.chemicalSystem}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                     >
                       <option value="">Select chemical system</option>
                       <option value="water-based">Water-based</option>
@@ -571,7 +571,7 @@ export default function LandingChemicalPharma() {
                       name="viscosity"
                       value={form.viscosity}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="e.g., 500-2000 cP"
                     />
                   </div>
@@ -582,7 +582,7 @@ export default function LandingChemicalPharma() {
                       name="targetFineness"
                       value={form.targetFineness}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="e.g., D90 < 500nm"
                     />
                   </div>
@@ -596,7 +596,7 @@ export default function LandingChemicalPharma() {
                       name="millType"
                       value={form.millType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="e.g., Horizontal, Basket"
                     />
                   </div>
@@ -606,7 +606,7 @@ export default function LandingChemicalPharma() {
                       name="monthlyUsage"
                       value={form.monthlyUsage}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
+                      className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                     >
                       <option value="">Select monthly usage</option>
                       <option value="0-100">0–100 kg</option>
@@ -624,7 +624,7 @@ export default function LandingChemicalPharma() {
                     value={form.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none placeholder:text-gray-500"
+                    className="w-full px-4 py-3 bg-navy border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none placeholder:text-gray-500"
                     placeholder="Share any specific requirements or questions about chemical & pharma grinding..."
                   />
                 </div>
@@ -635,7 +635,7 @@ export default function LandingChemicalPharma() {
                     id="terms"
                     checked={agreeTerms}
                     onChange={(e) => setAgreeTerms(e.target.checked)}
-                    className="mt-1 w-4 h-4 text-orange-500 border-blue-500/30 bg-[#0f1e3a] rounded focus:ring-orange-500"
+                    className="mt-1 w-4 h-4 text-orange-500 border-blue-500/30 bg-navy rounded focus:ring-orange-500"
                   />
                   <label htmlFor="terms" className="text-sm text-gray-400">
                     I agree to the{" "}
@@ -663,7 +663,7 @@ export default function LandingChemicalPharma() {
       </section>
 
       {/* Compliance & Disclaimer */}
-      <section className="py-12 bg-[#0a1628] border-t border-blue-500/20">
+      <section className="py-12 bg-navy border-t border-blue-500/20">
         <div className="container max-w-5xl">
           <motion.div
             initial="hidden"
@@ -671,7 +671,7 @@ export default function LandingChemicalPharma() {
             viewport={{ once: true }}
             variants={fadeUp}
             custom={0}
-            className="bg-[#1a2642] rounded-lg p-8 border border-amber-500/30"
+            className="bg-navy-light rounded-lg p-8 border border-amber-500/30"
           >
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center">
