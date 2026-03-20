@@ -161,7 +161,7 @@ export default function LandingFoodHealth() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src={IMAGES.hero.industrial}
+                  src={IMAGES.heroBanner}
                   alt="Food-grade zirconia beads"
                   className="w-full h-full object-cover"
                 />
