@@ -440,6 +440,8 @@ export default function Contact() {
                       <Link href="/terms" className="text-industrial-orange hover:underline">Terms</Link>.
                     </label>
                   </div>
+                  
+                  <p className="text-xs text-graphite-400 mt-2 mb-2">By submitting this form, you agree to our Privacy Policy and Terms & Conditions.</p>
 
                   <button
                     type="submit"
@@ -490,8 +492,8 @@ export default function Contact() {
                 <div className="flex items-start gap-2.5 text-sm text-graphite-500 mb-4">
                   <MapPin className="w-4 h-4 text-industrial-orange shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium text-navy">ZircoMax Precision Ceramics Co., Ltd.</p>
-                    <p className="text-xs text-graphite-400 mt-0.5">Legal Entity: NanJing Kerec Equipment Co., LTD (南京科睿才设备有限公司)</p>
+                    <p className="font-medium text-navy">Kerec Zirconia Beads</p>
+                    <p className="text-xs text-graphite-400 mt-0.5">Legal Entity: Nanjing Kerec Equipment Co., Ltd. (南京科睿才设备有限公司)</p>
                     <p>Building A1, Jingfeng Lechuang Center</p>
                     <p>Pukou District, Nanjing, Jiangsu</p>
                     <p>China</p>

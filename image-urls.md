@@ -1,4 +1,4 @@
-# Image URLs for ZircoMax Website
+# Image URLs for Kerec Zirconia Beads Website
 
 ## Generated Images (Compressed CDN URLs)
 

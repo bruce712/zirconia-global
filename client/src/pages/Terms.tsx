@@ -28,7 +28,7 @@ export default function Terms() {
           <div className="prose prose-sm max-w-none text-graphite-600 leading-relaxed space-y-6">
             <p>
               These Terms &amp; Conditions ("Terms") apply to business-to-business transactions and govern the sale of
-              products and services by NanJing Kerec Equipment Co., LTD (南京科睿才设备有限公司) ("Seller", "we", "us")
+              products and services by Nanjing Kerec Equipment Co., Ltd. (南京科睿才设备有限公司) ("Seller", "we", "us")
               to the buyer ("Buyer", "you"). By requesting a quotation, sample, placing an order, or using this Site,
               you agree to these Terms unless otherwise agreed in writing.
             </p>
@@ -117,7 +117,7 @@ export default function Terms() {
 
             <h2 className="font-heading text-xl font-semibold text-navy mt-8 mb-3">15) Contact Information</h2>
             <p>
-              NanJing Kerec Equipment Co., LTD (南京科睿才设备有限公司)<br />
+              Nanjing Kerec Equipment Co., Ltd. (南京科睿才设备有限公司)<br />
               Website: zirconiamedia.com<br />
               Email/Phone/WhatsApp/Address: as shown on the Site or in official quotations.
             </p>

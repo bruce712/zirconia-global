@@ -67,11 +67,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
               <div className="w-9 h-9 bg-white/10 rounded flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-lg leading-none">Z</span>
+                <span className="text-white font-heading font-bold text-lg leading-none">K</span>
               </div>
               <div>
-                <span className="font-heading font-bold text-white text-lg">ZircoMax</span>
-                <span className="block text-[10px] text-white/40 tracking-widest uppercase">Precision Ceramics</span>
+                <span className="font-heading font-bold text-white text-lg">Kerec Zirconia Beads</span>
+                <span className="block text-[10px] text-white/40 tracking-widest uppercase">Premium Grinding Media</span>
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-4 max-w-sm">
@@ -79,7 +79,7 @@ export default function Footer() {
               Serving global industries with precision grinding media since 2008.
             </p>
             <p className="text-white/40 text-xs leading-relaxed mb-6 max-w-sm">
-              <span className="font-medium text-white/60">Legal Entity:</span> NanJing Kerec Equipment Co., LTD (南京科睿才设备有限公司)
+              <span className="font-medium text-white/60">Legal Entity:</span> Nanjing Kerec Equipment Co., Ltd. (南京科睿才设备有限公司)
             </p>
             <div className="space-y-3 text-sm">
               <a href="mailto:18100601781@163.com" className="flex items-center gap-2.5 text-white/60 hover:text-white transition-colors">
@@ -144,7 +144,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <p>&copy; {new Date().getFullYear()} ZircoMax Precision Ceramics Co., Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nanjing Kerec Equipment Co., Ltd. All rights reserved.</p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="w-px h-3 bg-white/20" />

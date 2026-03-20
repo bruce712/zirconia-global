@@ -18,7 +18,7 @@ const caseStudies = [
     title: "European Automotive Coatings Manufacturer",
     industry: "Coatings & Inks",
     challenge: "Experiencing high media wear and color contamination in their metallic automotive paint production line, leading to frequent batch rejections.",
-    solution: "Switched from glass beads to ZircoMax 0.4mm 95% YSZ beads in their horizontal bead mill.",
+    solution: "Switched from glass beads to Kerec 0.4mm 95% YSZ beads in their horizontal bead mill.",
     results: [
       { metric: "Grinding Time", before: "4.5 hours", after: "3.1 hours", improvement: "-31%" },
       { metric: "Media Wear", before: "0.08%/hr", after: "0.003%/hr", improvement: "-96%" },
@@ -30,7 +30,7 @@ const caseStudies = [
     title: "Japanese Pharmaceutical Company",
     industry: "Pharmaceutical",
     challenge: "Needed to achieve consistent nano-particle size distribution for a new drug formulation while meeting strict GMP requirements.",
-    solution: "Implemented ZircoMax 0.1mm beads in their nano-milling process with full batch documentation.",
+    solution: "Implemented Kerec 0.1mm beads in their nano-milling process with full batch documentation.",
     results: [
       { metric: "Particle Size (D90)", before: "850 nm", after: "180 nm", improvement: "-79%" },
       { metric: "Size Distribution", before: "PDI 0.35", after: "PDI 0.12", improvement: "-66%" },
@@ -42,7 +42,7 @@ const caseStudies = [
     title: "Chinese Battery Material Producer",
     industry: "Battery Materials",
     challenge: "Inconsistent cathode material particle size was causing capacity variation in lithium-ion battery cells.",
-    solution: "Replaced alumina beads with ZircoMax 0.3mm YSZ beads for LFP cathode material grinding.",
+    solution: "Replaced alumina beads with Kerec 0.3mm YSZ beads for LFP cathode material grinding.",
     results: [
       { metric: "D50 Consistency", before: "±15%", after: "±3%", improvement: "+80%" },
       { metric: "Metal Contamination", before: "25 ppm Fe", after: "<2 ppm Fe", improvement: "-92%" },
@@ -85,7 +85,7 @@ export default function Cases() {
             <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Proven Results</span>
             <h1 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-2 mb-4">Case Studies & Media Comparison</h1>
             <p className="text-graphite-400 leading-relaxed">
-              Real-world results from customers who switched to ZircoMax zirconia beads, plus a comprehensive 
+              Real-world results from customers who switched to Kerec zirconia beads, plus a comprehensive 
               comparison with other grinding media types.
             </p>
           </motion.div>

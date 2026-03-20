@@ -1,4 +1,4 @@
-// Swiss Industrial Design - ZircoMax Image Assets
+// Swiss Industrial Design - Kerec Image Assets
 // All images served via CDN for optimal performance
 
 export const IMAGES = {

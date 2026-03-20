@@ -61,13 +61,13 @@ const industries = [
 
 const testimonials = [
   {
-    quote: "Switching to ZircoMax beads reduced our grinding time by 30% while achieving finer particle sizes. The consistency between batches is remarkable.",
+    quote: "Switching to Kerec beads reduced our grinding time by 30% while achieving finer particle sizes. The consistency between batches is remarkable.",
     author: "Thomas Mueller",
     role: "Production Manager",
     company: "EuroCoat GmbH, Germany",
   },
   {
-    quote: "We tested multiple suppliers before choosing ZircoMax. Their 95% YSZ beads show significantly lower contamination levels, critical for our pharmaceutical applications.",
+    quote: "We tested multiple suppliers before choosing Kerec. Their 95% YSZ beads show significantly lower contamination levels, critical for our pharmaceutical applications.",
     author: "Dr. Kenji Tanaka",
     role: "R&D Director",
     company: "NipponPharma Co., Japan",
@@ -390,7 +390,7 @@ export default function Home() {
               <div className="relative rounded overflow-hidden">
                 <img
                   src={IMAGES.factory}
-                  alt="ZircoMax Factory"
+                  alt="Kerec Factory"
                   loading="lazy"
                   className="w-full aspect-[4/3] object-cover"
                 />

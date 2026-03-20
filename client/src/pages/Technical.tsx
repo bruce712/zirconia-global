@@ -43,7 +43,7 @@ const faqs = [
     a: "The optimal bead size depends on your target particle size, mill type, and material properties. As a general rule, use beads 20-50x larger than your target particle size. For nano-grinding (<100nm), use 0.1-0.3mm beads. For standard grinding (1-10μm), use 0.6-1.5mm beads. Our technical team can provide specific recommendations based on your process parameters.",
   },
   {
-    q: "What is the expected lifespan of ZircoMax zirconia beads?",
+    q: "What is the expected lifespan of Kerec zirconia beads?",
     a: "Under normal operating conditions, our 95% YSZ beads typically last 12-18 months in continuous production, which is 3-5x longer than glass beads and 2-3x longer than alumina beads. Actual lifespan depends on factors such as mill speed, slurry viscosity, material hardness, and operating temperature.",
   },
   {

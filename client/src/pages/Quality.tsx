@@ -54,7 +54,7 @@ export default function Quality() {
       {/* Hero */}
       <section className="relative py-16 lg:py-24">
         <div className="absolute inset-0">
-          <img src={IMAGES.factory} alt="ZircoMax Factory" loading="lazy" className="w-full h-full object-cover" />
+          <img src={IMAGES.factory} alt="Kerec Factory" loading="lazy" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy/75" />
         </div>
         <div className="container relative z-10">

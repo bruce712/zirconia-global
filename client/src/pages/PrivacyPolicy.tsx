@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
 
           <div className="prose prose-sm max-w-none text-graphite-600 leading-relaxed space-y-6">
             <p>
-              This Privacy Policy explains how NanJing Kerec Equipment Co., LTD (Chinese name: 南京科睿才设备有限公司)
+              This Privacy Policy explains how Nanjing Kerec Equipment Co., Ltd. (Chinese name: 南京科睿才设备有限公司)
               ("we", "us", "our") collects, uses, and protects personal information when you visit zirconiamedia.com
               (the "Site") or contact us for quotations, samples, or technical support.
             </p>
@@ -114,7 +114,7 @@ export default function PrivacyPolicy() {
 
             <h2 className="font-heading text-xl font-semibold text-navy mt-8 mb-3">12) Contact Us</h2>
             <p>
-              NanJing Kerec Equipment Co., LTD (南京科睿才设备有限公司)<br />
+              Nanjing Kerec Equipment Co., Ltd. (南京科睿才设备有限公司)<br />
               Website: zirconiamedia.com<br />
               Email/Phone/WhatsApp/Address: use the official contact details shown on the Site.
             </p>

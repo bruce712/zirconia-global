@@ -1,4 +1,4 @@
-# ZircoMax 网站改造 TODO
+# Kerec Zirconia Beads 网站改造 TODO
 
 ## SEO 修复
 - [ ] 修复首页 meta description 长度（当前 211 字符，需缩至 50-160）

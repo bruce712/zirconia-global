@@ -190,6 +190,8 @@ export default function LandingCeramics() {
                   <Link href="/terms" className="text-industrial-orange hover:underline">Terms</Link>.
                 </label>
               </div>
+              
+              <p className="text-xs text-graphite-400 mt-2 mb-2">By submitting this form, you agree to our Privacy Policy and Terms & Conditions.</p>
 
               <button type="submit" disabled={!agreeTerms} className="inline-flex items-center gap-2 px-8 py-3.5 bg-industrial-orange text-white font-semibold text-sm rounded hover:bg-industrial-orange-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                 <Send className="w-4 h-4" />
