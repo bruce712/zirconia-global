@@ -104,13 +104,13 @@ export default function LandingFoodHealth() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a1628] via-[#0f1e3a] to-[#0a1628]">
       <Header />
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(34,197,94,0.06),transparent_50%)]" />
+      <section className="relative bg-gradient-to-br from-[#0a1628] via-[#0f1e3a] to-[#1a2642] pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%),radial-gradient(circle_at_70%_60%,rgba(249,115,22,0.08),transparent_50%)]" />
 
         <div className="container relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -121,30 +121,30 @@ export default function LandingFoodHealth() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
-                <Shield className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-semibold text-blue-700">Food-Grade Certified</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full mb-6">
+                <Shield className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-semibold text-blue-300">Food-Grade Certified</span>
               </div>
 
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 leading-tight">
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Zirconia Beads for Food & Health Powder Processing
               </h1>
 
-              <p className="text-lg text-graphite-500 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 Food-grade certified zirconia grinding media for food ingredients, health supplements, and nutraceuticals.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#contact-form"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
                 >
                   Request a Food-Grade Grinding Recommendation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a
                   href="#compliance"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all"
                 >
                   Ask for Sample & Documentation
                 </a>
@@ -166,9 +166,9 @@ export default function LandingFoodHealth() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-graphite-100">
-                <div className="text-3xl font-bold text-blue-600 mb-1">&lt;0.01%</div>
-                <div className="text-sm text-graphite-500 font-medium">Ultra-Low Wear Rate</div>
+              <div className="absolute -bottom-6 -left-6 bg-[#1a2642] p-6 rounded-xl shadow-lg border border-blue-500/30">
+                <div className="text-3xl font-bold text-orange-500 mb-1">&lt;0.01%</div>
+                <div className="text-sm text-gray-300 font-medium">Ultra-Low Wear Rate</div>
               </div>
             </motion.div>
           </div>
@@ -176,7 +176,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Pain Points vs Solutions - Paired Row Layout */}
-      <section className="py-20 bg-gradient-to-b from-graphite-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-[#0f1e3a] to-[#1a2642]">
         <div className="container">
           {/* Section Headers */}
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-12">
@@ -187,13 +187,13 @@ export default function LandingFoodHealth() {
               variants={fadeUp}
               custom={0}
             >
-              <span className="inline-block px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-full mb-4">
+              <span className="inline-block px-4 py-1.5 bg-red-500/20 text-red-400 text-sm font-semibold rounded-full mb-4">
                 Industry Challenges
               </span>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
                 Food & Health Powder Processing Challenges
               </h2>
-              <p className="text-graphite-500 text-lg">
+              <p className="text-gray-300 text-lg">
                 Traditional grinding media struggle to meet the strict requirements of food-grade applications.
               </p>
             </motion.div>
@@ -205,13 +205,13 @@ export default function LandingFoodHealth() {
               variants={fadeUp}
               custom={0}
             >
-              <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
+              <span className="inline-block px-4 py-1.5 bg-green-500/20 text-green-400 text-sm font-semibold rounded-full mb-4">
                 Kerec Solutions
               </span>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
                 Food-Grade Zirconia Technology
               </h2>
-              <p className="text-graphite-500 text-lg">
+              <p className="text-gray-300 text-lg">
                 Our 95% YSZ zirconia beads meet stringent food safety and hygiene standards.
               </p>
             </motion.div>
@@ -233,24 +233,24 @@ export default function LandingFoodHealth() {
                   className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch"
                 >
                   {/* Pain Point Card */}
-                  <div className="flex items-start gap-4 p-5 bg-white rounded-lg border border-red-200 shadow-sm h-full">
-                    <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center">
-                      <point.icon className="w-5 h-5 text-red-600" />
+                  <div className="flex items-start gap-4 p-5 bg-[#1a2642] rounded-lg border border-red-500/30 shadow-sm h-full">
+                    <div className="flex-shrink-0 w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                      <point.icon className="w-5 h-5 text-red-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">{point.title}</h3>
-                      <p className="text-sm text-graphite-500">{point.desc}</p>
+                      <h3 className="font-semibold text-white mb-1">{point.title}</h3>
+                      <p className="text-sm text-gray-400">{point.desc}</p>
                     </div>
                   </div>
 
                   {/* Solution Card */}
-                  <div className="flex items-start gap-4 p-5 bg-white rounded-lg border border-green-200 shadow-sm h-full">
-                    <div className="flex-shrink-0 w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
-                      <SolutionIcon className="w-5 h-5 text-green-600" />
+                  <div className="flex items-start gap-4 p-5 bg-[#1a2642] rounded-lg border border-green-500/30 shadow-sm h-full">
+                    <div className="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                      <SolutionIcon className="w-5 h-5 text-green-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">{solution.title}</h3>
-                      <p className="text-sm text-graphite-500">{solution.desc}</p>
+                      <h3 className="font-semibold text-white mb-1">{solution.title}</h3>
+                      <p className="text-sm text-gray-400">{solution.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -261,7 +261,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Trust & Compliance Section */}
-      <section id="compliance" className="py-20 bg-blue-50">
+      <section id="compliance" className="py-20 bg-[#0a1628]">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -272,30 +272,30 @@ export default function LandingFoodHealth() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full mb-4">
-                <FileCheck className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-semibold text-blue-700">Compliance & Documentation</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full mb-4">
+                <FileCheck className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-semibold text-blue-300">Compliance & Documentation</span>
               </div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
                 Food-Grade Safety & Certification
               </h2>
-              <p className="text-lg text-graphite-500">
+              <p className="text-lg text-gray-300">
                 Our zirconia beads comply with international food contact material standards. We provide comprehensive documentation to support your regulatory requirements.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg border border-blue-100 p-8">
+            <div className="bg-[#1a2642] rounded-xl shadow-lg border border-blue-500/30 p-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-blue-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-2">Compliance Statement</h3>
-                    <p className="text-sm text-graphite-500 mb-3">
+                    <h3 className="font-semibold text-white mb-2">Compliance Statement</h3>
+                    <p className="text-sm text-gray-400 mb-3">
                       Complies with food contact material regulations including EU 10/2011, FDA CFR 21, and GB standards.
                     </p>
-                    <button className="text-sm text-blue-600 font-medium hover:underline inline-flex items-center gap-1">
+                    <button className="text-sm text-orange-400 font-medium hover:underline inline-flex items-center gap-1">
                       <Download className="w-4 h-4" />
                       Request Documentation
                     </button>
@@ -303,12 +303,12 @@ export default function LandingFoodHealth() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
-                    <FileCheck className="w-6 h-6 text-green-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <FileCheck className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-2">Available Documentation</h3>
-                    <ul className="text-sm text-graphite-500 space-y-1">
+                    <h3 className="font-semibold text-white mb-2">Available Documentation</h3>
+                    <ul className="text-sm text-gray-400 space-y-1">
                       <li>• Certificate of Analysis (COA)</li>
                       <li>• Material Safety Data Sheet (MSDS)</li>
                       <li>• Material Composition Report</li>
@@ -318,12 +318,12 @@ export default function LandingFoodHealth() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-graphite-100">
+              <div className="mt-8 pt-8 border-t border-blue-500/20">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-navy mb-2">Test Report / COA / Material Information</h4>
-                    <p className="text-sm text-graphite-500">
+                    <h4 className="font-semibold text-white mb-2">Test Report / COA / Material Information</h4>
+                    <p className="text-sm text-gray-400">
                       We provide batch-specific test reports, certificates of analysis, and detailed material information for full traceability. Contact our team to request documentation for your specific application.
                     </p>
                   </div>
@@ -335,7 +335,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Recommended Applications */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#0f1e3a]">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -345,13 +345,13 @@ export default function LandingFoodHealth() {
             custom={0}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full mb-4">
               Core Applications
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Recommended Applications
             </h2>
-            <p className="text-graphite-500 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
               Our food-grade zirconia beads are trusted across the nutraceutical and functional food industries.
             </p>
           </motion.div>
@@ -365,12 +365,12 @@ export default function LandingFoodHealth() {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-blue-50 to-green-50 rounded-xl border border-blue-100 hover:shadow-lg transition-shadow"
+                className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-[#1a2642] to-[#0f1e3a] rounded-xl border border-blue-500/30 hover:shadow-lg transition-shadow"
               >
-                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                  <app.icon className="w-7 h-7 text-blue-600" />
+                <div className="w-14 h-14 bg-blue-500/20 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                  <app.icon className="w-7 h-7 text-blue-400" />
                 </div>
-                <h3 className="font-semibold text-navy">{app.label}</h3>
+                <h3 className="font-semibold text-white">{app.label}</h3>
               </motion.div>
             ))}
           </div>
@@ -378,7 +378,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Recommended Bead Sizes */}
-      <section className="py-20 bg-gradient-to-b from-graphite-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-[#0a1628] to-[#0f1e3a]">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -388,13 +388,13 @@ export default function LandingFoodHealth() {
             custom={0}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full mb-4">
               Size Selection
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Recommended Bead Sizes for Food & Health Applications
             </h2>
-            <p className="text-graphite-500 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
               Choose the optimal bead size based on your product requirements and target particle fineness.
             </p>
           </motion.div>
@@ -408,15 +408,15 @@ export default function LandingFoodHealth() {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="bg-white p-8 rounded-xl border-2 border-blue-100 hover:border-blue-300 transition-colors"
+                className="bg-[#1a2642] p-8 rounded-xl border-2 border-blue-500/30 hover:border-blue-400/50 transition-colors"
               >
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-4">
-                    <span className="text-2xl font-bold text-blue-600">{i + 1}</span>
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/20 rounded-full mb-4">
+                    <span className="text-2xl font-bold text-blue-400">{i + 1}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-navy mb-2">{size.range}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{size.range}</h3>
                 </div>
-                <p className="text-graphite-500 leading-relaxed">{size.applications}</p>
+                <p className="text-gray-400 leading-relaxed">{size.applications}</p>
               </motion.div>
             ))}
           </div>
@@ -424,7 +424,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#0f1e3a]">
         <div className="container max-w-4xl">
           <motion.div
             initial="hidden"
@@ -434,13 +434,13 @@ export default function LandingFoodHealth() {
             custom={0}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full mb-4">
               FAQ
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-graphite-500 text-lg">
+            <p className="text-gray-300 text-lg">
               Expert answers to common questions about food-grade zirconia beads.
             </p>
           </motion.div>
@@ -457,12 +457,12 @@ export default function LandingFoodHealth() {
                 <AccordionItem
                   key={i}
                   value={`item-${i}`}
-                  className="bg-blue-50 border border-blue-100 rounded-lg px-6 data-[state=open]:bg-white"
+                  className="bg-[#1a2642] border border-blue-500/30 rounded-lg px-6 data-[state=open]:bg-[#1a2642] data-[state=open]:border-blue-400/50"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-navy hover:no-underline py-5">
+                  <AccordionTrigger className="text-left font-semibold text-white hover:no-underline py-5">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-graphite-500 pb-5">
+                  <AccordionContent className="text-gray-400 pb-5">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -473,7 +473,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <section id="contact-form" className="py-20 bg-gradient-to-br from-[#0a1628] via-[#0f1e3a] to-[#1a2642]">
         <div className="container max-w-4xl">
           <motion.div
             initial="hidden"
@@ -483,13 +483,13 @@ export default function LandingFoodHealth() {
             custom={0}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-orange-500/20 text-orange-400 text-sm font-semibold rounded-full mb-4">
               Get Expert Guidance
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Request Your Food-Grade Grinding Recommendation
             </h2>
-            <p className="text-graphite-500 text-lg">
+            <p className="text-gray-300 text-lg">
               Share your requirements and our experts will recommend the optimal solution for your application.
             </p>
           </motion.div>
@@ -502,46 +502,46 @@ export default function LandingFoodHealth() {
             custom={1}
           >
             {submitted ? (
-              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-12 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
+              <div className="bg-green-500/10 border-2 border-green-500/30 rounded-xl p-12 text-center">
+                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy mb-3">Thank You!</h3>
-                <p className="text-graphite-500 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-3">Thank You!</h3>
+                <p className="text-gray-300 mb-6">
                   Your inquiry has been received. Our food-grade grinding experts will contact you within 24 hours.
                 </p>
                 <Link
                   href="/"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:underline"
+                  className="inline-flex items-center text-orange-400 font-semibold hover:underline"
                 >
                   Return to Homepage
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg border border-blue-100 p-8">
+              <form onSubmit={handleSubmit} className="bg-[#1a2642] rounded-xl shadow-lg border border-blue-500/30 p-8">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Company Name *</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Company Name *</label>
                     <input
                       type="text"
                       name="company"
                       value={form.company}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="Your company name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Your Name *</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Your Name *</label>
                     <input
                       type="text"
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="Full name"
                     />
                   </div>
@@ -549,26 +549,26 @@ export default function LandingFoodHealth() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Email *</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Email *</label>
                     <input
                       type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="you@company.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Phone *</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Phone *</label>
                     <input
                       type="tel"
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -576,24 +576,24 @@ export default function LandingFoodHealth() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Country/Region *</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Country/Region *</label>
                     <input
                       type="text"
                       name="country"
                       value={form.country}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="United States"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Product Type</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Product Type</label>
                     <select
                       name="productType"
                       value={form.productType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                     >
                       <option value="">Select product type</option>
                       <option value="herbal-extract">Herbal Extract Powders</option>
@@ -608,24 +608,24 @@ export default function LandingFoodHealth() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Mill Type</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Mill Type</label>
                     <input
                       type="text"
                       name="millType"
                       value={form.millType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="e.g., Horizontal, Vertical"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-navy mb-2">Target Fineness</label>
+                    <label className="block text-sm font-semibold text-white mb-2">Target Fineness</label>
                     <input
                       type="text"
                       name="targetFineness"
                       value={form.targetFineness}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder:text-gray-500"
                       placeholder="e.g., D90 < 50μm"
                     />
                   </div>
@@ -648,13 +648,13 @@ export default function LandingFoodHealth() {
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-sm font-semibold text-navy mb-2">Additional Requirements</label>
+                  <label className="block text-sm font-semibold text-white mb-2">Additional Requirements</label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-graphite-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    className="w-full px-4 py-3 bg-[#0f1e3a] border border-blue-500/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none placeholder:text-gray-500"
                     placeholder="Share any specific requirements or questions about food-grade grinding..."
                   />
                 </div>
@@ -665,15 +665,15 @@ export default function LandingFoodHealth() {
                     id="terms"
                     checked={agreeTerms}
                     onChange={(e) => setAgreeTerms(e.target.checked)}
-                    className="mt-1 w-4 h-4 text-blue-600 border-graphite-300 rounded focus:ring-blue-500"
+                    className="mt-1 w-4 h-4 text-orange-500 border-blue-500/30 bg-[#0f1e3a] rounded focus:ring-orange-500"
                   />
-                  <label htmlFor="terms" className="text-sm text-graphite-500">
+                  <label htmlFor="terms" className="text-sm text-gray-400">
                     I agree to the{" "}
-                    <Link href="/privacy-policy" className="text-blue-600 hover:underline">
+                    <Link href="/privacy-policy" className="text-blue-400 hover:underline">
                       Privacy Policy
                     </Link>{" "}
                     and{" "}
-                    <Link href="/terms" className="text-blue-600 hover:underline">
+                    <Link href="/terms" className="text-blue-400 hover:underline">
                       Terms & Conditions
                     </Link>
                   </label>
@@ -681,7 +681,7 @@ export default function LandingFoodHealth() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20"
+                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
                 >
                   <Send className="w-5 h-5" />
                   Submit Your Inquiry
@@ -693,7 +693,7 @@ export default function LandingFoodHealth() {
       </section>
 
       {/* Risk Control & Disclaimer */}
-      <section className="py-12 bg-graphite-50 border-t border-graphite-100">
+      <section className="py-12 bg-[#0a1628] border-t border-blue-500/20">
         <div className="container max-w-5xl">
           <motion.div
             initial="hidden"
@@ -701,15 +701,15 @@ export default function LandingFoodHealth() {
             viewport={{ once: true }}
             variants={fadeUp}
             custom={0}
-            className="bg-white rounded-lg p-8 border border-graphite-200"
+            className="bg-[#1a2642] rounded-lg p-8 border border-amber-500/30"
           >
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center">
-                <AlertTriangle className="w-5 h-5 text-amber-600" />
+              <div className="flex-shrink-0 w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-amber-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-navy mb-3">Disclaimer</h3>
-                <p className="text-sm text-graphite-500 leading-relaxed">
+                <h3 className="font-semibold text-white mb-3">Disclaimer</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
                   Kerec zirconia beads are strictly industrial grinding media designed exclusively for material milling and particle size reduction. We do not make any medical, nutritional, or health efficacy claims regarding the final processed products. Customers are responsible for ensuring their final products comply with all applicable food safety regulations, good manufacturing practices (GMP), and labeling requirements in their respective jurisdictions. All product information provided is for industrial milling process guidance only.
                 </p>
               </div>
