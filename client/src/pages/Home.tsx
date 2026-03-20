@@ -902,6 +902,158 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Preview */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container max-w-4xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Common Questions</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-graphite-400 mt-4 max-w-2xl mx-auto">
+              Quick answers to help you make informed purchasing decisions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={1}
+            variants={fadeUp}
+            className="space-y-4"
+          >
+            {[
+              {
+                q: "How to choose zirconia bead size?",
+                a: "Select bead size based on your target particle size: 0.1-0.3mm for nano grinding, 0.4-1.0mm for fine dispersion, 1.0-3.0mm for coarse grinding. Smaller beads provide finer results but require longer milling time.",
+              },
+              {
+                q: "What is your MOQ?",
+                a: "Our minimum order quantity is 50 kg. For first-time buyers or testing purposes, we can provide free samples (shipping cost at buyer's expense) before placing a full order.",
+              },
+              {
+                q: "Can I get a free sample?",
+                a: "Yes, we provide free samples up to 500g. You only need to cover the international shipping cost. Sample requests typically ship within 2-3 business days.",
+              },
+              {
+                q: "What packaging do you use?",
+                a: "Standard packaging is 25 kg per plastic drum with inner PE bag. Custom packaging options available for larger orders, including bulk bags, palletized drums, or specific container requirements.",
+              },
+              {
+                q: "Which countries do you ship to?",
+                a: "We export to over 50 countries worldwide including USA, Germany, UK, Japan, South Korea, India, Brazil, and more. FOB Qingdao with flexible shipping arrangements through your preferred freight forwarder.",
+              },
+            ].map((faq, i) => (
+              <motion.details
+                key={faq.q}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 2}
+                variants={fadeUp}
+                className="group border border-graphite-200 rounded-lg overflow-hidden hover:border-industrial-orange/30 transition-colors"
+              >
+                <summary className="flex items-center justify-between cursor-pointer bg-titanium-white px-6 py-5 font-heading font-semibold text-navy text-base hover:bg-graphite-50 transition-colors">
+                  {faq.q}
+                  <ChevronRight className="w-5 h-5 text-graphite-400 transition-transform group-open:rotate-90" />
+                </summary>
+                <div className="px-6 py-5 bg-white text-sm text-graphite-500 leading-relaxed border-t border-graphite-100">
+                  {faq.a}
+                </div>
+              </motion.details>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={7}
+            variants={fadeUp}
+            className="text-center mt-10"
+          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-industrial-orange hover:text-industrial-orange-hover transition-colors"
+            >
+              Have more questions? Contact us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-industrial-orange via-industrial-orange to-industrial-orange-hover relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full"
+               style={{
+                 backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)',
+                 backgroundSize: '30px 30px'
+               }}
+          />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="font-heading text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Need help selecting the right zirconia bead size for your process?
+              </h2>
+              <p className="text-lg lg:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Request a quote or send your grinding material, mill type, and target fineness.
+                Our technical team will recommend the optimal solution within 24 hours.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-industrial-orange font-bold text-base rounded-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-xl"
+                >
+                  Request a Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-bold text-base rounded-lg hover:bg-white/10 transition-all"
+                >
+                  Contact Technical Team
+                  <Users className="w-5 h-5" />
+                </Link>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-white/80 text-sm">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-5 h-5" />
+                  <span>ISO 9001:2015 Certified</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Package className="w-5 h-5" />
+                  <span>50+ Countries Served</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5" />
+                  <span>15+ Years Experience</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
       <WhatsAppFloat />
     </div>
