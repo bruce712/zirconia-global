@@ -7,6 +7,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import QuickSupplierFacts from "@/components/QuickSupplierFacts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -54,7 +55,14 @@ export default function SizeGuide() {
               Use this guide as a starting point, and contact our technical team for application-specific recommendations.
             </p>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Quick Supplier Facts */}
+      <QuickSupplierFacts />
+
+      <section>
+        <div className="container">
           {/* Guide Table */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp}>
             <div className="bg-white rounded border border-graphite-100 overflow-x-auto mb-12">

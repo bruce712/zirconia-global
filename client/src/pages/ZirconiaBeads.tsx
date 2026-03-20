@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { IMAGES } from "@/lib/images";
+import QuickSupplierFacts from "@/components/QuickSupplierFacts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -150,6 +151,9 @@ export default function ZirconiaBeads() {
           </div>
         </div>
       </section>
+
+      {/* Quick Supplier Facts */}
+      <QuickSupplierFacts />
 
       {/* Technical Specifications */}
       <section className="py-16 bg-titanium-white">

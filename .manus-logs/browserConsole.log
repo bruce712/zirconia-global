@@ -50,3 +50,33 @@
 [2026-03-20T02:51:50.050Z] {"timestamp":1773975108034,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-03-20T02:51:50.050Z] {"timestamp":1773975108224,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-03-20T02:51:50.050Z] {"timestamp":1773975108431,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T02:53:52.995Z] {"timestamp":1773975230885,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T02:53:52.995Z] {"timestamp":1773975231614,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T02:54:26.532Z] {"timestamp":1773975264299,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T02:54:26.532Z] {"timestamp":1773975264938,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T02:54:26.532Z] {"timestamp":1773975265272,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T03:04:04.575Z] {"timestamp":1773975842162,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T03:04:04.575Z] {"timestamp":1773975842667,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T03:04:04.575Z] {"timestamp":1773975842844,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T03:06:29.232Z] {"timestamp":1773975988843,"level":"LOG","args":["[vite] server connection lost. Polling for restart..."],"stack":null}
+[2026-03-20T03:06:31.707Z] {"timestamp":1773975989688,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T03:06:31.707Z] {"timestamp":1773975989714,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T03:06:31.707Z] {"timestamp":1773975989893,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T03:06:51.703Z] {"timestamp":1773976010376,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/Home.tsx"],"stack":null}
+[2026-03-20T03:06:51.703Z] {"timestamp":1773976010376,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-20T03:07:03.705Z] {"timestamp":1773976022162,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-20T03:07:13.703Z] {"timestamp":1773976033667,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-20T03:07:25.702Z] {"timestamp":1773976044618,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-20T03:07:49.703Z] {"timestamp":1773976069544,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-03-20T03:08:23.723Z] {"timestamp":1773976101706,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T03:08:23.723Z] {"timestamp":1773976102058,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T03:08:23.723Z] {"timestamp":1773976102386,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138584,"level":"LOG","args":["Found Quick Supplier Facts section at index 1"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138584,"level":"LOG","args":["Section HTML:","<section class=\"relative bg-navy overflow-hidden\"><div class=\"absolute inset-0\"><img alt=\"Zirconia beads\" class=\"w-full h-full object-cover opacity-40\" src=\"https://private-us-east-1.manuscdn.com/sessionFile/W0ymke3pRqUgLpJvPR4xgl/sandbox/ZRWQDKRh1eNsadCkXCZszs-img-1_1770536914000_na1fn_aGVyby1iYW5uZXI.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&amp;Expires=1798761600&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vz"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138584,"level":"LOG","args":["Found Quick Supplier Facts section at index 2"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138585,"level":"LOG","args":["Section HTML:","<section class=\"bg-navy-light py-8 lg:py-10\"><div class=\"container\"><div class=\"grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6\"><div class=\"flex flex-col items-center text-center text-white/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-package w-6 h-6 text-industrial-orange mb-2\"><path d=\"M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138585,"level":"LOG","args":["Found Quick Supplier Facts section at index 4"],"stack":null}
+[2026-03-20T03:08:59.720Z] {"timestamp":1773976138585,"level":"LOG","args":["Section HTML:","<section class=\"py-20 lg:py-28\"><div class=\"container\"><div class=\"text-center mb-14\" style=\"opacity: 1; transform: none;\"><span class=\"text-xs text-industrial-orange font-semibold uppercase tracking-widest\">Our Products</span><h2 class=\"font-heading text-3xl lg:text-4xl font-bold text-navy mt-3\">Premium Zirconia Solutions</h2></div><div class=\"grid md:grid-cols-2 gap-8\"><div class=\"group relative overflow-hidden rounded bg-white border border-graphite-100 hover:shadow-lg transition-shadow\" styl"],"stack":null}
+[2026-03-20T03:09:15.103Z] {"timestamp":1773976153084,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-03-20T03:09:15.103Z] {"timestamp":1773976153102,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-03-20T03:09:15.103Z] {"timestamp":1773976153270,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
