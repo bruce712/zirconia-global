@@ -41,7 +41,7 @@ function Router() {
         <Route path="/products/size-guide" component={SizeGuide} />
         <Route path="/products/packaging" component={Packaging} />
         <Route path="/products" component={ZirconiaBeads} />
-        <Route path="/applications/paint-ink-coatings" component={LandingPaintInk} />
+        <Route path="/applications/coatings-inks" component={LandingPaintInk} />
         <Route path="/applications/ceramics-electronic-ceramics" component={LandingCeramics} />
         <Route path="/applications/battery-materials" component={LandingBattery} />
         <Route path="/applications/minerals-chemicals" component={LandingMinerals} />

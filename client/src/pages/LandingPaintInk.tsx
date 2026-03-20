@@ -1,28 +1,18 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  CircleCheck as CheckCircle,
-  ChevronRight,
-  Send,
-  Paintbrush,
-  X,
-  TrendingDown,
-  Zap,
-  Shield,
-  Target,
-  Droplets,
-  Layers,
-  Sparkles,
-  Factory,
-  Beaker
-} from "lucide-react";
+import { ArrowRight, CircleCheck as CheckCircle, ChevronDown, Send, X, TrendingDown, Zap, Shield, Target, Droplets, Layers, Sparkles, Factory, Beaker } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { toast } from "sonner";
 import { IMAGES } from "@/lib/images";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -58,22 +48,22 @@ const beadSizes = [
   },
 ];
 
-const applicationScenarios = [
+const coreApplications = [
   { icon: Droplets, label: "Water-based inks" },
   { icon: Layers, label: "Solvent-based coatings" },
   { icon: Sparkles, label: "Pigment concentrates" },
-  { icon: Paintbrush, label: "Printing inks" },
+  { icon: Factory, label: "Printing inks" },
   { icon: Beaker, label: "Nano color paste" },
 ];
 
 const faqs = [
   {
     q: "Which bead size is suitable for ink grinding?",
-    a: "For printing inks, we recommend 0.3-0.6mm for gravure and flexographic inks. For inkjet inks requiring ultra-fine particles, use 0.1-0.3mm to achieve D90 < 100nm.",
+    a: "For inkjet and nano inks, use 0.1–0.3mm beads. For gravure and flexographic printing inks, 0.3–0.6mm is optimal. Target fineness and viscosity determine the final selection.",
   },
   {
     q: "Are zirconia beads suitable for nano dispersion?",
-    a: "Yes, our 95% YSZ beads in 0.1-0.3mm size are specifically engineered for nano-scale grinding, achieving particle sizes below 100nm for advanced coating formulations and nano color pastes.",
+    a: "Yes, 95% YSZ zirconia beads are ideal for nano dispersion. Their high density and hardness enable D90 < 100nm particle size for applications like automotive clear coats and inkjet inks.",
   },
   {
     q: "What is the wear rate?",
@@ -106,6 +96,10 @@ export default function LandingPaintInk() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!agreeTerms) {
+      toast.error("Please agree to the Privacy Policy and Terms & Conditions");
+      return;
+    }
     try {
       await fetch("https://formspree.io/f/xojnbblz", {
         method: "POST",
@@ -120,150 +114,145 @@ export default function LandingPaintInk() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="bg-titanium-white border-b border-graphite-100">
-        <div className="container py-3 flex items-center gap-2 text-xs text-graphite-400">
-          <Link href="/" className="hover:text-navy transition-colors">Home</Link>
-          <ChevronRight className="w-3 h-3" />
-          <Link href="/applications" className="hover:text-navy transition-colors">Applications</Link>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-navy font-medium">Paint, Ink & Coatings</span>
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-dark to-navy overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={IMAGES.applicationGrinding} alt="" className="w-full h-full object-cover" loading="lazy" />
+      <section className="relative bg-gradient-to-br from-navy via-navy-light to-navy pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }} />
         </div>
-
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(243, 112, 33, 0.15) 0%, transparent 50%)',
-        }} />
-
         <div className="container relative z-10">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={0}
-            variants={fadeUp}
-            className="max-w-3xl"
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <Paintbrush className="w-6 h-6 text-industrial-orange" />
-              <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Industry Solution</span>
-            </div>
-
-            <h1 className="font-heading text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            >
               Zirconia Beads for Paint, Ink & Coatings
-            </h1>
-
-            <p className="text-lg lg:text-xl text-white/80 leading-relaxed mb-8">
-              Engineered for high-efficiency pigment dispersion and nano-grinding. Achieve target fineness faster with lower contamination.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed"
+            >
+              Engineered for high-efficiency pigment dispersion and nano-grinding.
+              Achieve target fineness faster with lower contamination.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
               <a
                 href="#inquiry-form"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-industrial-orange text-white font-bold text-base rounded-lg hover:bg-industrial-orange-hover transition-all hover:scale-105 shadow-lg shadow-industrial-orange/30"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-industrial-orange text-white font-semibold rounded-lg hover:bg-industrial-orange-hover transition-all shadow-lg hover:shadow-xl"
               >
-                Request a Quote <ArrowRight className="w-5 h-5" />
+                Request a Quote
+                <ArrowRight className="w-5 h-5" />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold text-base rounded-lg hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all border border-white/20"
               >
                 Contact Technical Team
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Pain Points vs Solutions */}
-      <section className="py-20 lg:py-28 bg-titanium-white">
+      <section className="py-20 bg-gradient-to-b from-graphite-100 to-white">
         <div className="container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={0}
-            variants={fadeUp}
-            className="text-center mb-16"
-          >
-            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Transform Your Process</span>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
-              From Challenges to Solutions
-            </h2>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Industry Challenges */}
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+            {/* Pain Points */}
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              custom={1}
+              viewport={{ once: true, margin: "-100px" }}
               variants={fadeUp}
-              className="bg-white rounded-xl p-8 border-2 border-red-100 shadow-lg"
+              custom={0}
             >
-              <h3 className="font-heading text-2xl font-bold text-navy mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center">
-                  <X className="w-5 h-5 text-red-500" />
-                </div>
-                Industry Challenges
-              </h3>
-              <div className="space-y-5">
-                {painPoints.map((point, i) => {
-                  const Icon = point.icon;
-                  return (
-                    <div key={i} className="flex items-start gap-4 p-4 bg-red-50/50 rounded-lg border border-red-100">
-                      <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-red-600" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-navy mb-1">{point.title}</div>
-                        <div className="text-sm text-graphite-500">{point.desc}</div>
-                      </div>
+              <div className="mb-8">
+                <span className="inline-block px-4 py-1.5 bg-red-100 text-red-700 text-sm font-semibold rounded-full mb-4">
+                  Industry Challenges
+                </span>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+                  Common Problems in Pigment Milling
+                </h2>
+                <p className="text-graphite-500 text-lg">
+                  Traditional grinding media often fail to deliver the performance needed for modern coatings.
+                </p>
+              </div>
+              <div className="space-y-4">
+                {painPoints.map((point, i) => (
+                  <motion.div
+                    key={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    custom={i + 1}
+                    className="flex items-start gap-4 p-5 bg-white rounded-lg border border-red-200 shadow-sm"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center">
+                      <point.icon className="w-5 h-5 text-red-600" />
                     </div>
-                  );
-                })}
+                    <div>
+                      <h3 className="font-semibold text-navy mb-1">{point.title}</h3>
+                      <p className="text-sm text-graphite-500">{point.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
 
-            {/* Kerec Solutions */}
+            {/* Solutions */}
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              custom={2}
+              viewport={{ once: true, margin: "-100px" }}
               variants={fadeUp}
-              className="bg-gradient-to-br from-navy to-navy-dark rounded-xl p-8 border-2 border-industrial-orange shadow-lg"
+              custom={0}
             >
-              <h3 className="font-heading text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-industrial-orange/20 flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-industrial-orange" />
-                </div>
-                Kerec Solutions
-              </h3>
-              <div className="space-y-5">
-                {solutions.map((solution, i) => {
-                  const Icon = solution.icon;
-                  return (
-                    <div key={i} className="flex items-start gap-4 p-4 bg-white/5 rounded-lg border border-white/10">
-                      <div className="w-10 h-10 rounded-lg bg-industrial-orange/20 flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-industrial-orange" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-white mb-1">{solution.title}</div>
-                        <div className="text-sm text-white/70">{solution.desc}</div>
-                      </div>
+              <div className="mb-8">
+                <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full mb-4">
+                  Kerec Solutions
+                </span>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+                  Advanced Zirconia Technology
+                </h2>
+                <p className="text-graphite-500 text-lg">
+                  Our 95% YSZ zirconia beads deliver superior performance across all metrics.
+                </p>
+              </div>
+              <div className="space-y-4">
+                {solutions.map((solution, i) => (
+                  <motion.div
+                    key={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    custom={i + 1}
+                    className="flex items-start gap-4 p-5 bg-white rounded-lg border border-green-200 shadow-sm"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
+                      <solution.icon className="w-5 h-5 text-green-600" />
                     </div>
-                  );
-                })}
+                    <div>
+                      <h3 className="font-semibold text-navy mb-1">{solution.title}</h3>
+                      <p className="text-sm text-graphite-500">{solution.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -271,22 +260,21 @@ export default function LandingPaintInk() {
       </section>
 
       {/* Recommended Bead Sizes */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 bg-white">
         <div className="container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            custom={0}
             variants={fadeUp}
-            className="text-center mb-16"
+            custom={0}
+            className="text-center mb-12"
           >
-            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Specification Guide</span>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
               Recommended Bead Sizes
             </h2>
-            <p className="text-graphite-500 mt-4 max-w-2xl mx-auto">
-              Select the optimal bead size based on your target fineness and application requirements
+            <p className="text-lg text-graphite-500 max-w-2xl mx-auto">
+              Select the optimal size based on your target fineness and application requirements.
             </p>
           </motion.div>
 
@@ -294,353 +282,397 @@ export default function LandingPaintInk() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            custom={1}
             variants={fadeUp}
-            className="max-w-5xl mx-auto overflow-hidden rounded-xl border-2 border-graphite-200 bg-white shadow-xl"
+            custom={1}
+            className="max-w-5xl mx-auto"
           >
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gradient-to-r from-navy to-navy-dark border-b border-graphite-200">
-                  <th className="text-left px-6 py-4 font-heading font-bold text-white text-sm uppercase tracking-wide">
-                    Size Range
-                  </th>
-                  <th className="text-left px-6 py-4 font-heading font-bold text-white text-sm uppercase tracking-wide">
-                    Typical Applications
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {beadSizes.map((size, i) => (
-                  <motion.tr
-                    key={size.range}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    custom={i + 2}
-                    variants={fadeUp}
-                    className="border-b border-graphite-100 last:border-0 hover:bg-titanium-white transition-colors"
-                  >
-                    <td className="px-6 py-5">
-                      <div className="font-mono font-bold text-industrial-orange text-lg">{size.range}</div>
-                    </td>
-                    <td className="px-6 py-5">
-                      <div className="text-graphite-600 text-sm leading-relaxed">{size.applications}</div>
-                    </td>
-                  </motion.tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="bg-gradient-to-br from-navy to-navy-light rounded-xl overflow-hidden shadow-2xl">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="text-left px-6 py-4 text-white font-heading font-semibold text-sm uppercase tracking-wide">
+                        Size Range
+                      </th>
+                      <th className="text-left px-6 py-4 text-white font-heading font-semibold text-sm uppercase tracking-wide">
+                        Typical Applications
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {beadSizes.map((size, i) => (
+                      <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-5 text-white font-semibold text-lg whitespace-nowrap">
+                          {size.range}
+                        </td>
+                        <td className="px-6 py-5 text-white/80 leading-relaxed">
+                          {size.applications}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Core Application Scenarios */}
-      <section className="py-20 lg:py-28 bg-titanium-white">
+      {/* Core Applications */}
+      <section className="py-20 bg-graphite-100">
         <div className="container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            custom={0}
             variants={fadeUp}
-            className="text-center mb-16"
+            custom={0}
+            className="text-center mb-12"
           >
-            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Recommended For</span>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
-              Core Application Scenarios
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+              Recommended For
             </h2>
+            <p className="text-lg text-graphite-500 max-w-2xl mx-auto">
+              Proven performance across diverse coating and ink applications.
+            </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            {applicationScenarios.map((app, i) => {
-              const Icon = app.icon;
-              return (
-                <motion.div
-                  key={app.label}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  custom={i + 1}
-                  variants={fadeUp}
-                  className="bg-white rounded-xl p-6 border-2 border-graphite-100 hover:border-industrial-orange transition-all hover:scale-105 hover:shadow-lg group"
-                >
-                  <div className="w-14 h-14 rounded-xl bg-industrial-orange/10 flex items-center justify-center mb-4 group-hover:bg-industrial-orange/20 transition-colors">
-                    <Icon className="w-7 h-7 text-industrial-orange" />
-                  </div>
-                  <div className="font-semibold text-navy text-sm leading-snug">{app.label}</div>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {coreApplications.map((app, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={i}
+                className="flex flex-col items-center gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-graphite-200"
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-industrial-orange to-industrial-orange-hover rounded-lg flex items-center justify-center">
+                  <app.icon className="w-7 h-7 text-white" />
+                </div>
+                <span className="text-center text-sm font-semibold text-navy leading-snug">
+                  {app.label}
+                </span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Technical Inquiry Form */}
-      <section id="inquiry-form" className="py-20 lg:py-28 bg-white">
-        <div className="container max-w-3xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={0}
-            variants={fadeUp}
-            className="text-center mb-12"
-          >
-            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Get Expert Recommendation</span>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3 mb-4">
-              Technical Inquiry Form
-            </h2>
-            <p className="text-graphite-600 text-base leading-relaxed max-w-2xl mx-auto">
-              Tell us your pigment system, mill type, target fineness, and monthly usage. We'll recommend a suitable bead size.
-            </p>
-          </motion.div>
-
-          {submitted ? (
+      <section id="inquiry-form" className="py-20 bg-gradient-to-br from-navy via-navy-light to-navy">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-center py-16 bg-green-50 rounded-xl border-2 border-green-200"
-            >
-              <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-6" />
-              <h3 className="font-heading text-2xl font-bold text-navy mb-3">Thank You!</h3>
-              <p className="text-graphite-600 text-base">
-                We have received your inquiry and will respond within 12 hours.
-              </p>
-            </motion.div>
-          ) : (
-            <motion.form
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              custom={1}
               variants={fadeUp}
-              onSubmit={handleSubmit}
-              className="bg-titanium-white rounded-xl p-8 lg:p-10 border-2 border-graphite-200 shadow-2xl"
+              custom={0}
+              className="text-center mb-10"
             >
-              <div className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+                Get Technical Recommendations
+              </h2>
+              <p className="text-lg text-white/80 leading-relaxed">
+                Tell us your pigment system, mill type, target fineness, and monthly usage.
+                We'll recommend a suitable bead size.
+              </p>
+            </motion.div>
+
+            {submitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-white rounded-xl p-10 text-center shadow-2xl"
+              >
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="font-heading text-2xl font-bold text-navy mb-3">
+                  Thank You for Your Inquiry!
+                </h3>
+                <p className="text-graphite-500 mb-6">
+                  Our technical team will review your requirements and respond within 12 hours with personalized recommendations.
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="text-industrial-orange font-semibold hover:text-industrial-orange-hover transition-colors"
+                >
+                  Submit Another Inquiry
+                </button>
+              </motion.div>
+            ) : (
+              <motion.form
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={1}
+                onSubmit={handleSubmit}
+                className="bg-white rounded-xl p-8 md:p-10 shadow-2xl"
+              >
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Company Name *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Company Name <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       name="company"
                       value={form.company}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
-                      placeholder="Your company name"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
+                      placeholder="Your company"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Contact Person *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Your Name <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
-                      placeholder="Your full name"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
+                      placeholder="Full name"
                     />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Email *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Phone / WhatsApp</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Phone Number <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="tel"
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
+                      required
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
                       placeholder="+1 234 567 8900"
                     />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm text-navy font-semibold mb-2">Country / Region *</label>
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-navy mb-2">
+                    Country <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     name="country"
                     value={form.country}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
+                    className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
                     placeholder="Your country"
                   />
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Pigment System *</label>
-                    <input
-                      type="text"
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Pigment System <span className="text-red-500">*</span>
+                    </label>
+                    <select
                       name="pigmentSystem"
                       value={form.pigmentSystem}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
-                      placeholder="e.g., TiO₂, carbon black, organic pigments"
-                    />
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
+                    >
+                      <option value="">Select system</option>
+                      <option value="water-based">Water-based</option>
+                      <option value="solvent-based">Solvent-based</option>
+                      <option value="uv-curable">UV-curable</option>
+                      <option value="powder">Powder coating</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Mill Type *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Mill Type <span className="text-red-500">*</span>
+                    </label>
                     <select
                       name="millType"
                       value={form.millType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
                     >
                       <option value="">Select mill type</option>
-                      <option value="horizontal">Horizontal bead mill</option>
-                      <option value="vertical">Vertical bead mill</option>
-                      <option value="basket">Basket mill</option>
-                      <option value="pearl">Pearl mill</option>
+                      <option value="horizontal-bead-mill">Horizontal bead mill</option>
+                      <option value="vertical-bead-mill">Vertical bead mill</option>
+                      <option value="basket-mill">Basket mill</option>
+                      <option value="attritor-mill">Attritor mill</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Target Fineness *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Target Fineness <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       name="targetFineness"
                       value={form.targetFineness}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
-                      placeholder="e.g., D90 < 100nm, 5-10 microns"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
+                      placeholder="e.g., D90 < 200nm"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-navy font-semibold mb-2">Monthly Usage *</label>
+                    <label className="block text-sm font-semibold text-navy mb-2">
+                      Monthly Usage <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       name="monthlyUsage"
                       value={form.monthlyUsage}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none transition-all"
+                      className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent"
                       placeholder="e.g., 500 kg/month"
                     />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm text-navy font-semibold mb-2">Additional Information</label>
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-navy mb-2">
+                    Additional Information
+                  </label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-white border-2 border-graphite-200 rounded-lg text-navy placeholder:text-graphite-400 focus:border-industrial-orange focus:ring-2 focus:ring-industrial-orange/20 outline-none resize-none transition-all"
-                    placeholder="Any specific requirements or questions..."
+                    className="w-full px-4 py-3 border border-graphite-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-industrial-orange focus:border-transparent resize-none"
+                    placeholder="Tell us more about your application requirements..."
                   />
                 </div>
 
-                <div className="flex items-start gap-3 pt-2">
-                  <input
-                    type="checkbox"
-                    id="agree-paint"
-                    checked={agreeTerms}
-                    onChange={(e) => setAgreeTerms(e.target.checked)}
-                    required
-                    className="mt-1 w-4 h-4 rounded border-graphite-300 bg-white text-industrial-orange focus:ring-industrial-orange/20"
-                  />
-                  <label htmlFor="agree-paint" className="text-xs text-graphite-600 leading-relaxed">
-                    By submitting this form, you agree to our{" "}
-                    <Link href="/privacy-policy" className="text-industrial-orange hover:underline">Privacy Policy</Link>
-                    {" "}and{" "}
-                    <Link href="/terms" className="text-industrial-orange hover:underline">Terms & Conditions</Link>.
+                <div className="mb-6">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={agreeTerms}
+                      onChange={(e) => setAgreeTerms(e.target.checked)}
+                      className="mt-1 w-4 h-4 text-industrial-orange focus:ring-industrial-orange border-graphite-300 rounded"
+                    />
+                    <span className="text-sm text-graphite-500">
+                      By submitting this form, you agree to our{" "}
+                      <Link href="/privacy-policy" className="text-industrial-orange hover:underline">
+                        Privacy Policy
+                      </Link>{" "}
+                      and{" "}
+                      <Link href="/terms" className="text-industrial-orange hover:underline">
+                        Terms & Conditions
+                      </Link>
+                      .
+                    </span>
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  disabled={!agreeTerms}
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-industrial-orange text-white font-bold text-base rounded-lg hover:bg-industrial-orange-hover transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg shadow-industrial-orange/30"
+                  className="w-full py-4 bg-industrial-orange text-white font-bold text-lg rounded-lg hover:bg-industrial-orange-hover transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                 >
-                  <Send className="w-5 h-5" />
                   Request a Quote
+                  <Send className="w-5 h-5" />
                 </button>
-              </div>
-            </motion.form>
-          )}
+              </motion.form>
+            )}
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 lg:py-28 bg-titanium-white">
-        <div className="container max-w-4xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={0}
-            variants={fadeUp}
-            className="text-center mb-14"
-          >
-            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Common Questions</span>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3">
-              Frequently Asked Questions
-            </h2>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <motion.details
-                key={faq.q}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i + 1}
-                variants={fadeUp}
-                className="group border-2 border-graphite-200 rounded-lg overflow-hidden hover:border-industrial-orange transition-colors bg-white"
-              >
-                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 font-heading font-semibold text-navy text-base hover:bg-titanium-white transition-colors">
-                  {faq.q}
-                  <ChevronRight className="w-5 h-5 text-graphite-400 transition-transform group-open:rotate-90" />
-                </summary>
-                <div className="px-6 py-5 bg-titanium-white text-sm text-graphite-600 leading-relaxed border-t-2 border-graphite-100">
-                  {faq.a}
-                </div>
-              </motion.details>
-            ))}
-          </div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={5}
-            variants={fadeUp}
-            className="text-center mt-10"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-industrial-orange hover:text-industrial-orange-hover transition-colors"
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={0}
+              className="text-center mb-12"
             >
-              Have more questions? Contact our technical team
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </motion.div>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-navy mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-graphite-500">
+                Common questions about zirconia beads for paint and ink applications.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={1}
+            >
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`item-${i}`}
+                    className="bg-graphite-100 rounded-lg border border-graphite-200 px-6 data-[state=open]:bg-white data-[state=open]:shadow-md transition-all"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-navy hover:text-industrial-orange hover:no-underline py-5">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-graphite-500 pb-5 leading-relaxed">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={5}
+              className="text-center mt-10"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-industrial-orange hover:text-industrial-orange-hover transition-colors"
+              >
+                Have more questions? Contact our technical team
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 

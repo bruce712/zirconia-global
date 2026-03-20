@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "Packaging & Delivery", href: "/products/packaging" },
   ],
   applications: [
-    { label: "Paint, Ink & Coatings", href: "/applications/paint-ink-coatings" },
+    { label: "Paint, Ink & Coatings", href: "/applications/coatings-inks" },
     { label: "Ceramics & Electronic Ceramics", href: "/applications/ceramics-electronic-ceramics" },
     { label: "Battery Materials", href: "/applications/battery-materials" },
     { label: "Minerals & Chemicals", href: "/applications/minerals-chemicals" },
