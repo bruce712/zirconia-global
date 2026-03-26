@@ -387,10 +387,11 @@ export default function Home() {
             variants={fadeUp}
             className="text-center mb-10"
           >
-            <h3 className="font-heading text-lg font-semibold text-graphite-600 uppercase tracking-widest">Certified Excellence</h3>
+            <h3 className="font-heading text-2xl lg:text-3xl font-bold text-navy-900 uppercase tracking-widest mb-2">Certified Excellence</h3>
+            <p className="text-graphite-600 text-sm lg:text-base max-w-2xl mx-auto">Our products meet the highest international standards and certifications</p>
           </motion.div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
             {[
               { src: '/assets/images/certificates/ISO9001.jpg', alt: 'ISO 9001 Certification' },
               { src: '/assets/images/certificates/qc1.jpg', alt: 'Quality Certification 1' },
@@ -404,13 +405,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 custom={i + 1}
                 variants={fadeUp}
-                className="h-24 lg:h-28 flex items-center"
+                className="h-32 lg:h-40 flex items-center justify-center p-3 lg:p-4 bg-white rounded-lg border-2 border-graphite-200 shadow-md hover:shadow-lg hover:border-orange-500 transition-all duration-300"
               >
                 <img
                   src={cert.src}
                   alt={cert.alt}
                   loading="lazy"
-                  className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
                 />
               </motion.div>
             ))}
