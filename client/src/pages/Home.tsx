@@ -376,6 +376,93 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section className="py-16 lg:py-20 bg-titanium-white border-y border-graphite-100">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-10"
+          >
+            <h3 className="font-heading text-lg font-semibold text-graphite-600 uppercase tracking-widest">Certified Excellence</h3>
+          </motion.div>
+
+          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+            {[
+              { src: '/assets/images/certificates/ISO9001.jpg', alt: 'ISO 9001 Certification' },
+              { src: '/assets/images/certificates/qc1.jpg', alt: 'Quality Certification 1' },
+              { src: '/assets/images/certificates/qc2.jpg', alt: 'Quality Certification 2' },
+              { src: '/assets/images/certificates/qc3.jpg', alt: 'Quality Certification 3' },
+            ].map((cert, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i + 1}
+                variants={fadeUp}
+                className="h-24 lg:h-28 flex items-center"
+              >
+                <img
+                  src={cert.src}
+                  alt={cert.alt}
+                  loading="lazy"
+                  className="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Showcase */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="text-xs text-industrial-orange font-semibold uppercase tracking-widest">Manufacturing Excellence</span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-navy mt-3 mb-4">
+              State-of-the-Art Production Facility
+            </h2>
+            <p className="text-graphite-500 max-w-2xl mx-auto">
+              Our modern manufacturing facility combines advanced automation with precision quality control, 
+              ensuring every batch meets the highest international standards.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[5, 1, 3, 4, 6, 7].map((i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                variants={fadeUp}
+                className="relative group overflow-hidden rounded-lg aspect-square"
+              >
+                <img
+                  src={`/assets/images/factory/factory${i}.jpeg`}
+                  alt={`Factory floor ${i}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quality & Factory Preview */}
       <section className="py-20 lg:py-28">
         <div className="container">

@@ -105,6 +105,28 @@ export default function Quality() {
               </motion.div>
             ))}
           </div>
+
+          {/* Certificate Images */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={6} variants={fadeUp} className="mt-12 pt-12 border-t border-graphite-100">
+            <h3 className="font-heading text-lg font-semibold text-navy mb-6 text-center">Our Certifications</h3>
+            <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
+              {[
+                { src: '/assets/images/certificates/ISO9001.jpg', alt: 'ISO 9001 Certification' },
+                { src: '/assets/images/certificates/qc1.jpg', alt: 'Quality Certification 1' },
+                { src: '/assets/images/certificates/qc2.jpg', alt: 'Quality Certification 2' },
+                { src: '/assets/images/certificates/qc3.jpg', alt: 'Quality Certification 3' },
+              ].map((cert, i) => (
+                <div key={i} className="h-24 lg:h-28 flex items-center">
+                  <img
+                    src={cert.src}
+                    alt={cert.alt}
+                    loading="lazy"
+                    className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -144,6 +166,40 @@ export default function Quality() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Gallery */}
+      <section className="py-16 bg-titanium-white">
+        <div className="container">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-12">
+            <h2 className="font-heading text-2xl lg:text-3xl font-bold text-navy mb-3">Our Manufacturing Facility</h2>
+            <p className="text-graphite-400 max-w-2xl mx-auto">
+              State-of-the-art production equipment and rigorous quality control ensure consistent excellence in every batch.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[1, 21, 3, 4, 5, 6].map((i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                variants={fadeUp}
+                className="relative group overflow-hidden rounded-lg aspect-square"
+              >
+                <img
+                  src={`/assets/images/factory/factory${i}.jpeg`}
+                  alt={`Factory floor ${i}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
