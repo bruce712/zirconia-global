@@ -440,8 +440,8 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[5, 1, 3, 4, 6, 7].map((i) => (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            {[10, 1, 3, 4, 6, 7].map((i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -452,7 +452,7 @@ export default function Home() {
                 className="relative group overflow-hidden rounded-lg aspect-square"
               >
                 <img
-                  src={`/assets/images/factory/factory${i}.jpeg`}
+                  src={`/assets/images/factory/factory${i}.jpg`}
                   alt={`Factory floor ${i}`}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

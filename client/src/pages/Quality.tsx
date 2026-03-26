@@ -182,7 +182,7 @@ export default function Quality() {
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 21, 3, 4, 5, 6].map((i) => (
+            {[1, 14, 3, 4, 5, 6].map((i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -193,7 +193,7 @@ export default function Quality() {
                 className="relative group overflow-hidden rounded-lg aspect-square"
               >
                 <img
-                  src={`/assets/images/factory/factory${i}.jpeg`}
+                  src={`/assets/images/factory/factory${i}.jpg`}
                   alt={`Factory floor ${i}`}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
